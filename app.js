@@ -108,8 +108,3 @@ app.get('/view_obituaries', (req, res) => {
         res.send(html);
     });
 });
-
-// Start Server
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
-});

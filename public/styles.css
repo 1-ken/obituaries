@@ -1,18 +1,22 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     padding: 20px;
+    text-align: center;
 }
 
 h1 {
     text-align: center;
+    color: gold;
     margin-bottom: 20px;
 }
 
 nav {
-    background-color: #007BFF;
+    background-color: black;
     padding: 10px 0;
     margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 nav ul {
@@ -28,7 +32,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: gold;
     text-decoration: none;
     font-weight: bold;
 }
@@ -44,23 +48,27 @@ form {
     border: 1px solid #ccc;
     border-radius: 1em;
     background-color: #fff;
+    text-align: left; /* To make sure form elements align properly */
 }
 
 label {
-    margin-top: 1em;
     display: block;
+    margin-top: 1em;
+    color: black;
 }
 
 input, textarea {
     width: 100%;
     padding: 0.5em;
     margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
 }
 
 button {
     padding: 0.7em;
-    color: #fff;
-    background-color: #007BFF;
+    color: white;
+    background-color: black;
     border: none;
     border-radius: 0.3em;
     margin-top: 1em;
@@ -68,31 +76,48 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #444;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+.obituaries-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-table th, table td {
-    padding: 12px 15px;
-    text-align: left;
+article {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s;
 }
 
-table th {
-    background-color: #007BFF;
-    color: white;
+article:hover {
+    transform: translateY(-5px);
 }
 
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+article header h2 {
+    color: black;
+    margin: 0 0 10px;
+    text-align: center;
 }
 
-table tr:hover {
-    background-color: #ddd;
+article p {
+    color: black;
+}
+
+footer p {
+    color: gray;
+}
+
+.social-share a {
+    margin-right: 10px;
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-share a:hover {
+    text-decoration: underline;
 }
