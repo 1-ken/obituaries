@@ -45,6 +45,11 @@ app.post('/submit_obituary', (req, res) => {
     });
 });
 
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
+
+
 // View Obituaries
 app.get('/view_obituaries', (req, res) => {
     const sql = 'SELECT * FROM obituaries ORDER BY submission_date DESC';
